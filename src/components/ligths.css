@@ -1,0 +1,25 @@
+:root {
+  --spacing: 1em;
+  --color: blue;
+}
+#box {
+  background-color: #333;
+  width: calc(100px + var(--spacing));
+  padding: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing);
+}
+.light {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--color);
+}
+.light.on {
+  filter: drop-shadow(2px 4px 6px var(--color));
+}
+.light:not(.on) {
+  filter: grayscale(70%) opacity();
+}
